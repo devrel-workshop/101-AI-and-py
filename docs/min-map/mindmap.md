@@ -8,20 +8,23 @@ markmap:
 ## 101
 
 ### Théorie
-#### IA
+#### 🧸 IA
  - bases
- - conception / entrainement / inférence
+ - conception / entraînement / inférence
  - CPU vs GPU
  
-#### Python
+#### 🐼 Python
  - pip
  - bases (script vs classes)
 
-#### CDE
+#### 🐼 CDE
 
 ### Environnement
- - IDE (cloud)
+ - 🐼 IDE (cloud)
    - Choix CDE
+     - Coder
+       - Image de démarrage
+       - Stocker l'image sur Harbor OVHcloud ?
    - OVHAI CLI
    - Python + libs
    - outils (à lister)
@@ -30,8 +33,8 @@ markmap:
    - AI
    - data
  - Repo GH
-   - organisation
-   - repos
+   - ✅ organisation
+   - ✅ repos
 
 ### Sujet
 #### Détection d'image
@@ -41,11 +44,14 @@ markmap:
  - ForePaaS ?
  - OVHcloud ETL ?
 
-##### YOLO V?
+##### 🧸 YOLO V?
  - pré-entrainé 
  - à améliorer 
    - transfer learning
    - relabeliser après inférence 
+
+##### 🧸 Modèle détection des points ?
+  - cf Axa (Devoxx)
 
 ### Modèle
  
@@ -76,3 +82,25 @@ markmap:
    - Eléa
    - Transfer learning
    - Custo entrainement en python
+
+### Abstract
+  - Indiquer le CDE
+  - Indiquer Python
+  - Indiquer IA
+  - Pré-requis
+    - CDE (opérationnelle)
+    - IA (POC)
+      - Modèle
+      - App 
+      - Notebook
+      - Dataset
+    - Python (POC)
+      - App
+      - Choix Fwks (streamlit, ...)
+    - Environnements OVHcloud
+      - création / destruction
+      - "env" étanches par participant.e.s
+      - token IA par participant.e.s
+      - CLI pour créer Notebook / Training / Deploy
+  - Optionnel
+    - Embarqué
