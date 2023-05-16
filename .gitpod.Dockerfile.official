@@ -1,0 +1,5 @@
+FROM gitpod/workspace-python-3.11
+
+RUN curl https://cli.gra.ai.cloud.ovh.net/install.sh | bash
+
+USER gitpod
