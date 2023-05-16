@@ -4,4 +4,3 @@ tasks:
   - name: Script Task
     init: echo 'init script' # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
     command: source /home/gitpod/venv/bin/activate
-

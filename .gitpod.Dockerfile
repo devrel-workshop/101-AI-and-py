@@ -22,3 +22,5 @@ RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
 
 USER gitpod
 
+ENV VIRTUAL_ENV=/home/gitpod/venv
+RUN python3.10 -m venv $VIRTUAL_ENV
