@@ -18,13 +18,22 @@ markmap:
  - bases (script vs classes)
 
 #### 🐼 CDE
+  - Gitpod
+    - Ce que c'est
+    - Pourquoi ?
+    - Comment ?
 
 ### Environnement
  - 🐼 IDE (cloud)
    - Choix CDE
      - Coder
+       - V2
        - Image de démarrage
        - Stocker l'image sur Harbor OVHcloud ?
+     - GitPod
+       - V1
+       - .gitpod.yaml / image
+       - Stocker l'image sur Harbor
    - OVHAI CLI
    - Python + libs
    - outils (à lister)
@@ -32,6 +41,7 @@ markmap:
    - TF / Quarkus / Python
    - AI
    - data
+     - préparer les données en amont sur un object storage pour gagner du temps
  - Repo GH
    - ✅ organisation
    - ✅ repos
@@ -44,11 +54,18 @@ markmap:
  - ForePaaS ?
  - OVHcloud ETL ?
 
-##### 🧸 YOLO V?
+##### 🧸 YOLO V7 / V8
  - pré-entrainé 
  - à améliorer 
    - transfer learning
    - relabeliser après inférence 
+
+##### Flowers power
+ - resnet 50
+   - classification d'images
+   - transfert learning
+   - 🎥 https://youtu.be/v7wmNcSKDko
+   - https://github.com/ovh/ai-training-examples/blob/main/notebooks/computer-vision/image-classification/tensorflow/resnet50/notebook-resnet-transfer-learning-image-classification.ipynb
 
 ##### 🧸 Modèle détection des points ?
   - cf Axa (Devoxx)
@@ -102,5 +119,7 @@ markmap:
       - "env" étanches par participant.e.s
       - token IA par participant.e.s
       - CLI pour créer Notebook / Training / Deploy
+    - notions
+      - "on vous propose d'ouvrir le capot sans démonter le moteur"
   - Optionnel
     - Embarqué
