@@ -1,6 +1,7 @@
-image: 0z3u11u7.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.0.1
+image: 0z3u11u7.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.0.2
 
 tasks:
   - name: Script Task
     init: echo 'init script' # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
     command: source /home/gitpod/venv/bin/activate
+
