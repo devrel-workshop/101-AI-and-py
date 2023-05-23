@@ -14,4 +14,8 @@
   - https://help.ovhcloud.com/csm/en-gb-public-cloud-ai-deploy-streamlit-yolov7-sign-language?id=kb_article_view&sysparm_article=KB0057491
 
 
+## Datasets
+ - https://universe.roboflow.com/joseph-nelson/uno-cards
+ - https://universe.roboflow.com/roboflow-100/poker-cards-cxcvz
+
 
