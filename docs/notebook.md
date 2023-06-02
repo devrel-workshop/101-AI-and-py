@@ -17,3 +17,8 @@ ovhai notebook run conda jupyterlab \
     --volume 101-ai-lab-model@GRA:/workspace/model:RWD \
 	  --volume https://<user>:<token>@github.com/devrel-workshop/101-AI-and-py.git:/workspace/101-ai-lab-sources:RWD
 ```
+
+Download the dataset `https://universe.roboflow.com/marydhel-compaero/gender-27ceb` in `/workspace/data`:
+```bash
+curl -L "https://universe.roboflow.com/ds/trYhd0futY?key=JCK7Gk2GzH" > roboflow.zip; unzip roboflow.zip; rm roboflow.zip
+```
