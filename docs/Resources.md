@@ -20,6 +20,8 @@
 ## Datasets
  - https://universe.roboflow.com/joseph-nelson/uno-cards
  - https://universe.roboflow.com/roboflow-100/poker-cards-cxcvz
+ - https://universe.roboflow.com/hypo/face-l95es
+ - https://universe.roboflow.com/search?q=rock%20paper%20scissor
 
 ## App
  - Gradio peut être une alternative à Sreamlit : https://gradio.app/image-classification-with-vision-transformers/
