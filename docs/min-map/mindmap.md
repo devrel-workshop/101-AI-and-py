@@ -123,3 +123,12 @@ markmap:
       - "on vous propose d'ouvrir le capot sans démonter le moteur"
   - Optionnel
     - Embarqué
+### 🎙 CFPs
+  - Cloud Nord
+    - ✅ 📝 
+  - Devoxx Marocco
+    - ✅ Compte à créer pour Thierry  
+    - ✅ 📝 
+  - Devoxx Belgium
+    - ✅ Compte à créer pour Stéphane
+    - ✅ 📝 
