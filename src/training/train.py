@@ -11,6 +11,6 @@ from ultralytics import YOLO
 # 🧠 Load a pretrained YOLO model
 model = YOLO('/workspace/model/yolov8n.pt')
 # 💪 Train the model with new data
-model.train(data='/workspace/data/cards-small/data.yaml', device=0, epochs=100)
+model.train(data='/workspace/data/rock-paper-scissors/data.yaml', device=0, epochs=5)
 # 💾 Save the model
-model.save('/workspace/data/cards-small/cards-small-model')
+model.save('/workspace/model/rock-paper-scissors/rock-paper-scissors')
