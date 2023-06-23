@@ -15,7 +15,8 @@ ovhai notebook run conda jupyterlab \
     --gpu 1 \
     --volume 101-ai-lab-data@GRA:/workspace/data:RWD \
     --volume 101-ai-lab-model@GRA:/workspace/model:RWD \
-	  --volume https://<user>:<token>@github.com/devrel-workshop/101-AI-and-py.git:/workspace/101-ai-lab-sources:RWD
+	  --volume https://<user>:<token>@github.com/devrel-workshop/101-AI-and-py.git:/workspace/101-ai-lab-sources:RWD \
+    --ssh-public-keys "ssh-rsa wonderful public key"
 ```
 
 Download the dataset `https://universe.roboflow.com/marydhel-compaero/gender-27ceb` in `/workspace/data`:
