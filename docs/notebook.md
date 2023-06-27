@@ -19,7 +19,6 @@ ovhai notebook run conda jupyterlab \
     --ssh-public-keys "ssh-rsa wonderful public key"
 ```
 
-Download the dataset `https://universe.roboflow.com/marydhel-compaero/gender-27ceb` in `/workspace/data`:
-```bash
-curl -L "https://universe.roboflow.com/ds/trYhd0futY?key=JCK7Gk2GzH" > roboflow.zip; unzip roboflow.zip; rm roboflow.zip
-```
+Download the dataset `https://universe.roboflow.com/roboflow-58fyf/rock-paper-scissors-sxsw` in `/workspace/data`:
+  - use the YOLOv8 format
+  - copy / past the curl command (beware of the `>` encoded in `&glt;` after pasting it)
