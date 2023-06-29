@@ -133,4 +133,4 @@ dmypy.json
 *.onnx
 *.pt
 *.torchscript
-/yolov8n_saved_model/
+yolov8n_saved_model/
