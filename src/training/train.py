@@ -1,4 +1,6 @@
+import ultralytics
 from ultralytics import YOLO
+import shutil
 
 ###################################################################################################################
 ## 🎯 The aim of this script is to do transfert learning on YOLOv8 model.                                        ##
@@ -8,9 +10,15 @@ from ultralytics import YOLO
 ## location of the training data.                                                                                ##
 ###################################################################################################################
 
+# ✅ Check configuration
+ultralytics.checks()
 # 🧠 Load a pretrained YOLO model
-model = YOLO('/workspace/model/rock-paper-scissors/model.pt')
-# 💪 Train the model with new data
+model = YOLO('yolov8n.pt')
+# 💪 Train the model with new data ➡️ one GPU / 5 itérations (epochs)
 model.train(data='/workspace/data/rock-paper-scissors/data.yaml', device=0, epochs=5)
 # 💾 Save the model
-model.save('/workspace/model/rock-paper-scissors/rock-paper-scissors')
+exportedMetaData = model.export()
+print('Model save to : ' + exportedMetaData)
+# ➡️ Copy the model to the object storage
+shutil.copy(exportedMetaData, '/workspace/model/rock-paper-scissors/')
+#shutil.copy(exportedMetaData, '/tmp/')
