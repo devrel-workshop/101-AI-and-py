@@ -134,3 +134,5 @@ dmypy.json
 *.pt
 *.torchscript
 /yolov8n_saved_model/
+runs/
+src/app/photo/
