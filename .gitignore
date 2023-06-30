@@ -136,3 +136,4 @@ dmypy.json
 /yolov8n_saved_model/
 runs/
 src/app/photo/
+yolov8n_saved_model/
