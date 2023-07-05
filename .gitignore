@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+101-lab/
 
 # C extensions
 *.so
@@ -127,3 +128,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Model format
+*.onnx
+*.pt
+*.torchscript
+/yolov8n_saved_model/
+runs/
+src/app/photo/
+yolov8n_saved_model/
