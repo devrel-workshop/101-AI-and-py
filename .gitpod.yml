@@ -1,4 +1,4 @@
-image: 0z3u11u7.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.1.0
+image: 0z3u11u7.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.1.1
 
 tasks:
   - name: Script Task
