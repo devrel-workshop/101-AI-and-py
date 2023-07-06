@@ -10,7 +10,10 @@ RUN apt-get update && apt-get install -yq \
     python3-pip \
     unzip \
     curl \
-    docker.io
+    docker.io \
+    libgl1 \
+    libglib2.0-0
+    
 # thoses steps reduce the size of the image but users nees to do apt update to install anything
 #    docker.io \
 #    && apt-get clean \
