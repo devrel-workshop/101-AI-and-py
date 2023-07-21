@@ -22,13 +22,14 @@ if __name__ == '__main__':
 
     # 📸 Camera input
     img_file_buffer = st.camera_input("Take your picture in real time:")
-    photoPath = save_photo(img_file_buffer) 
+    if img_file_buffer is not None:
+      photoPath = save_photo(img_file_buffer) 
 
-    # 🔎 Prediction
-    results = model.predict(photoPath, verbose=True, save=True, conf=0.5)
+      # 🔎 Prediction
+      results = model.predict(photoPath, verbose=True, save=True, conf=0.5)
 
-    # 📈 Display results
-    for r in results:
-      for c in r.boxes.cls:
-        st.write(r.names[int(c)])
-    #st.write(results)
+      # 📈 Display results
+      for r in results:
+        for c in r.boxes.cls:
+          st.write(r.names[int(c)])
+      #st.write(results)
