@@ -141,3 +141,8 @@ runs/
 src/app/photo/
 yolov8n_saved_model/
 .environment
+
+# Terraform
+.terraform.lock.hcl
+terraform.tfstate.backup
+.terraform/
