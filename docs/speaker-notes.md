@@ -19,7 +19,14 @@
     - type: private
     - name: `rock-paper-scissors-data`
 
-## AI Token creation
-  - authenticate with your Openstack user (must have the roles: `AI Training Operator` & `AI Training Reader`)
-  - create tokens with the command: `ovhai token create -r operator <token name>`
-  - store / share the created token with students
+## AI products configuration
+
+### Harbor registry
+
+  - in the Dashboard section:
+    - `Docker Registries`
+    - `Add`
+    - Region: `GRA`
+    - Username: `<user to pull / push>`
+    - password: `<user password>`
+    - Private Docker Registry URL : `<Harbor URL>`
