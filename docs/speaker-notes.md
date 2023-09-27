@@ -11,8 +11,13 @@
   - set the environment variables `OS_AUTH_URL`, `OS_USERNAME`, `OS_PASSWORD` and `OS_TENANT_NAME`
   - apply the terraform script [create-users.tf](../src/tf/create-users.tf): `terraform apply -var="number_of_users=<number of users>"`
   - get users credentials: `terraform output ai-users`
+
+### Create the Objects Storage
   - apply the terraform script [create-swift-objects.tf](../src/tf/ai-swift/create-swift-objects.tf): `terraform apply -var="number_of_attendees=<number of attendees>"`
   - get attendees swift container object name: `terraform output ai-objects-storage`
+  - create the shared object storage (Swift): 
+    - type: private
+    - name: `rock-paper-scissors-data`
 
 ## AI Token creation
   - authenticate with your Openstack user (must have the roles: `AI Training Operator` & `AI Training Reader`)

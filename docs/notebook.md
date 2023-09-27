@@ -1,10 +1,9 @@
 ## Instructions to create the JupyterLab Notebook
 
-### Object storage creation
+### Initialisation of the cloud resources
 
-Create two Swift object storage: 
-  - type: private
-  - name: `101-ai-lab-model` & `101-ai-lab-data`
+  - get the Openstack user
+  - get the object storage name
 
 ### Notebook creation
 
@@ -12,11 +11,12 @@ Create two Swift object storage:
   - Use the CLI to create the Notebook (at this time it's the only way to use private GitHub repository):
 ```bash
 ovhai notebook run conda jupyterlab \
-	--name 101-ai-lab-notebook \
-	--gpu 1 \
-	--volume 101-ai-lab-data@GRA:/workspace/data:RW \
-	--volume 101-ai-lab-model@GRA:/workspace/model:RW \
-  --volume https://github.com/devrel-workshop/101-AI-and-py.git:/workspace/101-ai-lab-sources:RW
+ --name attendee-<number>-ai-lab-notebook \
+ --gpu 1 \
+ --volume rock-paper-scissors-data@GRA:/workspace/data:RO \
+ --volume attendee-<number>-data@GRA:/workspace/attendee:RW \
+ --volume https://github.com/devrel-workshop/101-AI-and-py.git:/workspace/101-ai-lab-sources:RO
+
 ```
   - Connect to the created Notebook
   - create the directory `new-images` in `/workspace/data/rock-paper-scissors`
