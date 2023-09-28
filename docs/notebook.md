@@ -18,3 +18,6 @@ ovhai notebook run conda jupyterlab \
 ```
   - Connect to the created Notebook
   - launch the initialisation script: `/workspace/101-ai-lab-sources/init_ai_env.sh`
+  - open the Notebook `/workspace/attendee/rock-paper-scissors.ipynb`
+  - follow the instructions in the notebook
+    - the roboflow URL: `https://universe.roboflow.com/ds/CfbtXZ5S1M?key=xxxx`

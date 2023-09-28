@@ -34,15 +34,18 @@
 
 ### Slides
 
-### Notebook demo
+### AI Notebook demo
 
-  - init
-  - pip n°1
-  - pip n°2: ~10s
-  - training: ~5mins
+  - dataset download: ~1"
+  - pips: ~2"30
+  - training: ~5"
 
-### Training demo
+### AI Training demo
 
-  - Docker image build: ~4 mins
-  - Docker push image: ~20 mins/~12 mins
-  - AI training job: ~
+  - Docker image build: ~4"
+  - Docker push image: ~20"/~12"
+  - AI training job: ~60" for 50 epochs / ~20" for 10 epochs
+
+### AI Deploy demo
+  - AI Deploy launch: ~8"
+  - to get the full tained model: `ovhai bucket object copy attendee-backup-data@GRA --container attendee-$STUDENT_ID-data best.torchscript best.torchscript`

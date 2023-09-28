@@ -25,7 +25,7 @@ Use the CLI to create the Job:
 ovhai job run \
 	--name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-training-job \
 	--gpu 1 \
-	--env NB_OF_EPOCHS=50 \
+	--env NB_OF_EPOCHS=10 \
 	--volume attendee-$STUDENT_ID-data@GRA:/workspace/attendee:RW:cache \
 	--unsecure-http \
 	$REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0
