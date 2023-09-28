@@ -18,6 +18,7 @@ Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-roc
 ### App creation
 
  - run the app with AI App:
+
 ```bash
 ovhai app run \
 	--name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-app \
@@ -27,3 +28,8 @@ ovhai app run \
 	--unsecure-http \
 	$REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0
 ```
+- get the URL:
+	- get the application id: `ovhai app list` 
+	- find the field `Url` in the details og the application with the command: `ovhai app get <app id>`
+	
+
