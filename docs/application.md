@@ -28,6 +28,7 @@ ovhai app run \
 	--unsecure-http \
 	$REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0
 ```
+- get the logs: `ovhai app logs -f <app id>`
 - get the URL:
 	- get the application id: `ovhai app list` 
 	- find the field `Url` in the details og the application with the command: `ovhai app get <app id>`
