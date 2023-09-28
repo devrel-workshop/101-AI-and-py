@@ -13,8 +13,7 @@
 ovhai notebook run conda jupyterlab \
  --name attendee-$STUDENT_ID-ai-lab-notebook \
  --gpu 1 \
- --volume rock-paper-scissors-data@GRA:/workspace/data:RO \
- --volume attendee-$STUDENT_ID-data@GRA:/workspace/attendee:RW \
+ --volume attendee-$STUDENT_ID-data@GRA:/workspace/attendee:RW:cache \
  --volume https://github.com/devrel-workshop/101-AI-and-py.git:/workspace/101-ai-lab-sources:RO
 ```
   - Connect to the created Notebook
