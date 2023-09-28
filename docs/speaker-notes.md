@@ -40,3 +40,9 @@
   - pip n°1
   - pip n°2: ~10s
   - training: ~5mins
+
+### Training demo
+
+  - Docker image build: ~4 mins
+  - Docker push image: ~20 mins/~12 mins
+  - AI training job: ~
