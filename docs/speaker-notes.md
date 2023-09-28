@@ -20,7 +20,6 @@
     - name: `rock-paper-scissors-data`
 
 ## AI products configuration
-
 ### Harbor registry
 
   - in the Dashboard section:
@@ -30,3 +29,14 @@
     - Username: `<user to pull / push>`
     - password: `<user password>`
     - Private Docker Registry URL : `<Harbor URL>`
+
+## Timing
+
+### Slides
+
+### Notebook demo
+
+  - init
+  - pip n°1
+  - pip n°2: ~10s
+  - training: ~5mins
