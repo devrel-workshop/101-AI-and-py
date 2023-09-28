@@ -146,3 +146,4 @@ yolov8n_saved_model/
 .terraform.lock.hcl
 terraform.tfstate.backup
 .terraform/
+terraform.tfstate
