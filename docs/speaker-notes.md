@@ -17,7 +17,7 @@
   - get attendees swift container object name: `terraform output ai-objects-storage`
   - create the shared object storage (Swift): 
     - type: private
-    - name: `rock-paper-scissors-data`
+    - name: `attendee-backup-data`
 
 ## AI products configuration
 ### Harbor registry
