@@ -1,5 +1,6 @@
 .dockerignore
+Dockerfile
 ./local-dataset/
-./run/
+./runs/
 best.torchscript
 yolov8n.pt
