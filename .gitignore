@@ -148,3 +148,4 @@ terraform.tfstate.backup
 .terraform/
 terraform.tfstate
 .vscode/
+labels.cache

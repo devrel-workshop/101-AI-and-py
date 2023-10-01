@@ -1,0 +1,5 @@
+.dockerignore
+./local-dataset/
+./run/
+best.torchscript
+yolov8n.pt
