@@ -28,10 +28,6 @@ To run your training locally:
 		- `export PATH_TO_EXPORTED_MODEL=./`
 	- run the training: `python train.py`
 
-
-
-If you need to debug or want to launch the training locally: `docker run --rm -it --user=42420:42420 -e NB_OF_EPOCHS=1 $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0` 
-
 ### Job creation 
 
 Use the CLI to create the Job:
