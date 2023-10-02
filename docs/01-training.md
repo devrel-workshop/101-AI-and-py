@@ -16,7 +16,17 @@ In `/src/training/`, build the image using Docker: `docker build . -t $REGISTRY_
 Then, authenticate to the registry: `docker login $REGISTRY_NAME  -u $REGISTRY_LOGIN -p $REGISTRY_PASSWORD`.
 Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0`.
 
-If you need to debug or want to launch the training locally: `docker run --rm -it --user=42420:42420 -e NB_OF_EPOCHS=1 $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0` 
+### Run locally 
+
+If you need to debug your Python application you can run locally your training (beware of the performances you don't have GPU locally).
+To run your training locally:
+	- install dependencies: `pip install -r requirements.txt`
+	- set the environment variables:
+		- `export NB_OF_EPOCHS=1`
+		- `export DEVICE_TO_USE=cpu`
+		- `export PATH_TO_DATASET=/workspace/101-AI-and-py/src/training/local-dataset/data.yaml`
+		- `export PATH_TO_EXPORTED_MODEL=./`
+	- run the training: `python train.py`
 
 ### Job creation 
 

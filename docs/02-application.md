@@ -15,10 +15,18 @@ Then, authenticate to the registry: `docker login $REGISTRY_NAME  -u $REGISTRY_L
 ⚠️ Perhaps you have to remove some previous created Docker images to free space to build this image ⚠️
 Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0`.
 
+### Run locally 
+
+If you need to debug your Python application you can run locally your app.
+To run your application locally:
+	- install dependencies: `pip install -r requirements.txt`
+	- set the environment variables:
+		- `export WORK_PATH=../training/`
+	- run the training: `streamlit run train.py`
+
 ### App creation
 
  - run the app with AI App:
-
 ```bash
 ovhai app run \
 	--name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-app \

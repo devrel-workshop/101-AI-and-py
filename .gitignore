@@ -147,3 +147,6 @@ yolov8n_saved_model/
 terraform.tfstate.backup
 .terraform/
 terraform.tfstate
+.vscode/
+labels.cache
+src/training/*.jpg
