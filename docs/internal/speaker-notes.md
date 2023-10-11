@@ -56,7 +56,7 @@
   - cellule 1 : extrait le dataset depuis l'object storage `workshop-resources`
   - cellules 2 & 3 : dépendances pip avec notamment ultralytics qui est l'implem de YoloV8
   - cellule 4 : check de la conf ultralytics et GPU
-  - cellule 5 : récupération du modèle en taille max (avec le pls gd nombre de paramètres)
+  - cellule 5 : récupération du modèle : on prends le plus petit pour que cela tienne dans le lab
   - cellule 6 : premier test avec une image : une personne est reconnue mais pas les ciseaux
   - cellule 7 : entraînement sur 5 epochs (5 boucles) sur le dataset pierre/feuille/ciseaux (device 0 c'est pour sélectionner le GPU)
   - cellule 8 : résultat des entraînement : il faut que la courbe bleue ne ls'éloigne pas trop de la courbe en pointillés et que elle se rapproche d'un plat, là on voir que l'on peut améliorer encore, c'est normal 5 epochs ce n'est pas suffisant
