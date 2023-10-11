@@ -69,7 +69,7 @@
   - suivre le markdown pour tout ce qui est construction
   - je pense que le dockerfile c'est bon et le code python est une récupération de que l'on a fait sur le notebook
   - soit tu fais une pause au moment du push de l'image
-  - soit pour lancer l'entraînement tu utilise l'image de backup : (slide 65):
+  - soit pour lancer l'entraînement tu utilises l'image de backup : (slide 66):
 ```bash
 ovhai job run \
  --name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-training-job \
