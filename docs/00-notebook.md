@@ -7,7 +7,6 @@
 
 ### Notebook creation
 
-  - authenticate with `ovhai` CLI: `ovhai login`
   - Use the CLI to create the Notebook (at this time it's the only way to use private GitHub repository):
 ```bash
 ovhai notebook run conda jupyterlab \
@@ -17,7 +16,7 @@ ovhai notebook run conda jupyterlab \
  --volume https://github.com/devrel-workshop/101-AI-and-py.git:/workspace/101-ai-lab-sources:RO
 ```
   - Connect to the created Notebook when its status is `RUNNING`
-    - to get the URL: `ovhai notebook list`
+    - to get the URL: `ovhai notebook list | grep attendee-$STUDENT_ID`
   - launch the initialisation script: `/workspace/101-ai-lab-sources/init_ai_env.sh`
   - open the Notebook `/workspace/attendee/rock-paper-scissors.ipynb`
   - follow the instructions in the notebook
