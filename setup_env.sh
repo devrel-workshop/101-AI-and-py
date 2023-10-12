@@ -1,8 +1,23 @@
-echo "# identifiant unique de la participante ou du participant (réutiliser qd il faut identfiier de manière unique des éléments, par ex le nom des images dans Harbor)
-# unique identifier for the participant (reused when items need to be uniquely identified, e.g. the name of images in Harbor)
-STUDENT_ID=
-# URL de la registry Harbor à utiliser, par ex: .gra7.container-registry.ovh.net/workshop_ia
-# URL of the Harbor registry to be used, e.g.: .gra7.container-registry.ovh.net/workshop_ia
+# Get the attendee configuration parameters
+curl -u attendee http://162.19.64.158/lab-information -o attendee-conf.json
+echo "Downladed parameters:"
+cat attendee-conf.json|jq
+
+STUDENT_ID=$(jq -r '.studentId' "attendee-conf.json")
 REGISTRY_NAME=ubf2r2if.c1.gra9.container-registry.ovh.net/lab
-REGISTRY_LOGIN=
-REGISTRY_PASSWORD="> .environment
+REGISTRY_LOGIN=$(jq -r '.registryLogin' "attendee-conf.json")
+REGISTRY_PASSWORD=$(jq -r '.registryPassword' "attendee-conf.json")
+AI_USER=$(jq -r '.username' "attendee-conf.json")
+AI_PASSWORD=$(jq -r '.password' "attendee-conf.json")
+
+echo "Your environment variables:"
+echo "   - STUDENT_ID: " $STUDENT_ID
+echo "   - REGISTRY_LOGIN: " $REGISTRY_LOGIN
+echo "   - REGISTRY_LOGIN: " $REGISTRY_PASSWORD
+echo "   - AI_USER: " $AI_USER
+echo "   - AI_PASSWORD: " $AI_PASSWORD
+
+# Authentication with AI CLI
+ovhai login -u $AI_USER -p $AI_PASSWORD
+echo "You are connected with your AI user:"
+ovhai me
