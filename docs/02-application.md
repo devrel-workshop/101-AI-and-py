@@ -38,7 +38,7 @@ ovhai app run \
 ```
 - get the logs: `ovhai app logs -f <app id>`
 - get the URL:
-	- get the application id: `ovhai app list` 
+	- get the application id: `ovhai app list | grep lab/$STUDENT_ID` 
 	- find the field `Url` in the details og the application with the command: `ovhai app get <app id>`
 	
 

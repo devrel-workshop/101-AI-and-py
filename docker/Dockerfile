@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -yq \
     curl \
     docker.io \
     libgl1 \
-    libglib2.0-0
+    libglib2.0-0 \
+    jq
     
 # thoses steps reduce the size of the image but users nees to do apt update to install anything
 #    docker.io \

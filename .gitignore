@@ -151,3 +151,4 @@ terraform.tfstate
 labels.cache
 src/training/*.jpg
 .terraform.tfstate.lock.info
+attendee-conf.json
