@@ -14,7 +14,7 @@ AI_TOKEN=$(jq -r '.token' "attendee-conf.json")
 echo "Your environment variables:"
 echo "   - STUDENT_ID: " $STUDENT_ID
 echo "   - REGISTRY_LOGIN: " $REGISTRY_LOGIN
-echo "   - REGISTRY_LOGIN: " $REGISTRY_PASSWORD
+echo "   - REGISTRY_PASSWORD: " $REGISTRY_PASSWORD
 echo "   - AI_TOKEN: " $AI_TOKEN
 #echo "   - AI_USER: " $AI_USER
 #echo "   - AI_PASSWORD: " $AI_PASSWORD
@@ -25,4 +25,5 @@ echo "   - AI_TOKEN: " $AI_TOKEN
 #ovhai me
 
 # List the notebook for attendee
+echo ovhai notebook list --token $AI_TOKEN
 ovhai notebook list --token $AI_TOKEN
