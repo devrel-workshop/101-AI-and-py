@@ -2,6 +2,19 @@
 
 Here you find all steps to create and run an image to create an application based on the previous trained the model (with AI Training).
 
+### Script creation
+
+ℹ️ You can access to the solutions in the folder [src/app/solution](../src/app/solution) ℹ️
+
+Follow the instructions in the [/src/app/app.py](../src/app/app.py) file to add code to create an application using the model.
+
+If you need to debug your Python application you can run locally your app.
+To run your application locally:
+	- install dependencies: `pip install -r requirements.txt`
+	- set the environment variables:
+		- `export WORK_PATH=./photo/`
+	- run the training: `streamlit run train.py`
+
 ### Image build
 
 The Python script need to access to the following path `/workspace/attendee`.
@@ -14,15 +27,6 @@ In `/src/app/`, build the image using Docker: `docker build . -t $REGISTRY_NAME/
 Then, authenticate to the registry: `docker login $REGISTRY_NAME  -u $REGISTRY_LOGIN -p $REGISTRY_PASSWORD`.
 ⚠️ Perhaps you have to remove some previous created Docker images to free space to build this image ⚠️
 Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0`.
-
-### Run locally 
-
-If you need to debug your Python application you can run locally your app.
-To run your application locally:
-	- install dependencies: `pip install -r requirements.txt`
-	- set the environment variables:
-		- `export WORK_PATH=../training/`
-	- run the training: `streamlit run train.py`
 
 ### App creation
 
@@ -41,4 +45,3 @@ ovhai app run \
 	- get the application id: `ovhai app list | grep lab/$STUDENT_ID` 
 	- find the field `Url` in the details og the application with the command: `ovhai app get <app id>`
 	
-
