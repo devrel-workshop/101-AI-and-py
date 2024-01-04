@@ -2,6 +2,24 @@
 
 Here you find all steps to create and run an image to train the model previously design with AI Notebook.
 
+### Script creation
+
+ℹ️ You can access to the solutions in the folder [src/training/solution](../src/training/solution) ℹ️
+
+Follow the instructions in the [/src/training/train.py](../src/training/train.py) file to add code to train the model.
+
+If you need to debug your Python application you can run locally your training (beware of the performances you don't have GPU locally).
+To run your training locally:
+	- install dependencies: `pip install -r requirements.txt`
+	- set the environment variables:
+		- `export NB_OF_EPOCHS=1`
+		- `export DEVICE_TO_USE=cpu`
+		- `export PATH_TO_DATASET=/workspace/101-AI-and-py/src/training/local-dataset/data.yaml`
+		- `export PATH_TO_EXPORTED_MODEL=./`
+	- run the training: `python train.py`
+
+⚠️ The [src/training/local-dataset](../src/training/local-dataset) is only a subset of the real dataset for testing / debugging only ⚠️
+
 ### Image build
 
 The Python script need to access to two paths:
@@ -15,18 +33,6 @@ The registry used to store the image is the an Harbor registry provided by OVHcl
 In `/src/training/`, build the image using Docker: `docker build . -t $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0`.  
 Then, authenticate to the registry: `docker login $REGISTRY_NAME  -u $REGISTRY_LOGIN -p $REGISTRY_PASSWORD`.
 Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0`.
-
-### Run locally 
-
-If you need to debug your Python application you can run locally your training (beware of the performances you don't have GPU locally).
-To run your training locally:
-	- install dependencies: `pip install -r requirements.txt`
-	- set the environment variables:
-		- `export NB_OF_EPOCHS=1`
-		- `export DEVICE_TO_USE=cpu`
-		- `export PATH_TO_DATASET=/workspace/101-AI-and-py/src/training/local-dataset/data.yaml`
-		- `export PATH_TO_EXPORTED_MODEL=./`
-	- run the training: `python train.py`
 
 ### Job creation 
 
