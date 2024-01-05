@@ -26,7 +26,7 @@ The Python script need to access to two paths:
  - one to load the training data: `/workspace/attendee/data.yaml`
  - one to write the trained model: `/workspace/attendee/`
 
-These two locations are mounted as volume of the image, the paths for the host are the OVHcloud object containers storage used in the Notebook: `attendee-$STUDENT_ID-data`.
+These two locations are mounted as volume of the image, the paths for the host are the OVHcloud object container storage used in the Notebook: `xxxx_id`, for example `conference_0`.
 
 The registry used to store the image is the an Harbor registry provided by OVHcloud, ask the speakers for the URL and account.
 
