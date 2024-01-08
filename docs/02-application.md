@@ -11,15 +11,16 @@ Follow the instructions in the [/src/app/app.py](../src/app/app.py) file to add 
 If you need to debug your Python application you can run locally your app.
 To run your application locally:
 	- install dependencies: `pip install -r requirements.txt`
+	- download / get the weights of your trained model and copy it to a `work` folder
 	- set the environment variables:
-		- `export WORK_PATH=./photo/`
-	- run the training: `streamlit run train.py`
+		- `export WORK_PATH=./work/`
+	- run the application: `streamlit run app.py`
 
 ### Image build
 
-The Python script need to access to the following path `/workspace/attendee`.
+The Python script need to access to the following path mounted as volume in your image: `/workspace/attendee`.
 
-This location is mounted as volumes of the image, the paths for the host is the OVHcloud object container storage used in the Notebook: `attendee-$STUDENT_ID-data`.
+The volume is the S3 object container storage previously used: `$WORKSHOP_NAME-$STUDENT_ID@S3GRA`
 
 The registry used to store the image is the an Harbor registry provided by OVHcloud, ask the speakers for the URL and account.
 
