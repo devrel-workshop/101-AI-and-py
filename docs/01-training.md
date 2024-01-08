@@ -40,7 +40,7 @@ Use the CLI to create the Job:
 ```bash
 ovhai job run \
 	--token $AI_TOKEN \
-	--name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-training-job \
+	--name $STUDENT_ID-yolov8-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
 	--volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \

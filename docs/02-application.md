@@ -35,7 +35,7 @@ Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-roc
 ```bash
 ovhai app run \
     --token $AI_TOKEN \
-    --name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-app \
+    --name $STUDENT_ID-yolov8-rock-paper-scissors-app \
     --cpu 1 \
     --default-http-port 8501 \
     --volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
