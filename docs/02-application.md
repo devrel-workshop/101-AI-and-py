@@ -20,7 +20,7 @@ To run your application locally:
 
 The Python script need to access to the following path mounted as volume in your image: `/workspace/attendee`.
 
-The volume is the S3 object container storage previously used: `$WORKSHOP_NAME-$STUDENT_ID@S3GRA`
+The volume is the S3 object container storage previously used: `$STUDENT_ID@S3GRA`
 
 The registry used to store the image is the an Harbor registry provided by OVHcloud, ask the speakers for the URL and account.
 
@@ -35,10 +35,10 @@ Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-roc
 ```bash
 ovhai app run \
     --token $AI_TOKEN \
-    --name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-app \
+    --name $STUDENT_ID-yolov8-rock-paper-scissors-app \
     --cpu 1 \
     --default-http-port 8501 \
-    --volume $WORKSHOP_NAME-$STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
+    --volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
     --unsecure-http \
     $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0
 ```
