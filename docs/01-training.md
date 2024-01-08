@@ -26,7 +26,7 @@ The Python script need to access to two paths:
  - one to load the training data: `/workspace/attendee/data.yaml`
  - one to write the trained model: `/workspace/attendee/`
 
-These two locations are mounted as volume of the image, the paths for the host are the OVHcloud object containers storage used in the Notebook: `attendee-$STUDENT_ID-data`.
+These two locations are mounted as volume of the image, the paths for the host are the OVHcloud object container storage used in the Notebook: `xxxx_id`, for example `conference_0`.
 
 The registry used to store the image is the an Harbor registry provided by OVHcloud, ask the speakers for the URL and account.
 
@@ -39,10 +39,11 @@ Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-roc
 Use the CLI to create the Job:
 ```bash
 ovhai job run \
+	--token $AI_TOKEN \
 	--name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
-	--volume attendee-$STUDENT_ID-data@GRA:/workspace/attendee:RW:cache \
+	--volume $WORKSHOP_NAME-$STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
 	--unsecure-http \
 	$REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0
 ```
