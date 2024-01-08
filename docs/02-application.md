@@ -34,15 +34,16 @@ Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-roc
  - run the app with AI App:
 ```bash
 ovhai app run \
-	--name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-app \
-	--cpu 1 \
-	--default-http-port 8501 \
-	--volume attendee-$STUDENT_ID-data@GRA:/workspace/attendee:RW:cache \
-	--unsecure-http \
-	$REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0
+    --token $AI_TOKEN \
+    --name attendee-$STUDENT_ID-yolov8-rock-paper-scissors-app \
+    --cpu 1 \
+    --default-http-port 8501 \
+    --volume $WORKSHOP_NAME-$STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
+    --unsecure-http \
+    $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0
 ```
-- get the logs: `ovhai app logs -f <app id>`
+- get the logs: `ovhai app logs -f <app id> --token $AI_TOKEN`
 - get the URL:
-	- get the application id: `ovhai app list | grep lab/$STUDENT_ID` 
-	- find the field `Url` in the details og the application with the command: `ovhai app get <app id>`
+	- get the application id: `ovhai app list --token $AI_TOKEN` 
+	- find the field `Url` in the details of the application with the command: `ovhai app get <app id> --token $AI_TOKEN`
 	
