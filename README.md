@@ -9,13 +9,14 @@ After enter it you will see all your environment variable set and displayed:
 Downladed parameters:
 Your environment variables:
    - STUDENT_ID: <id of the attendee>
+   - REGISTRY_NAME: the name of the registry to use with the Docker commands
    - REGISTRY_LOGIN: <login to the remote registry> 
-   - REGISTRY_LOGIN: <password to the remote registry>
+   - REGISTRY_PASSWORD: <password to the remote registry>
    - AI_TOKEN: <AI token to use OVHcloud AI tools>
 ```
 Following by the information of your Notebook:
 ```bash
-$ ovhai notebook list --token <your token>
+$ ovhai notebook list --token $AI_TOKEN
 
 ID                                   NAME            STATE    AGE  FRAMEWORK VERSION                   EDITOR     URL
 xxxxxxx-ssss-zzzz-ffff-tttttttttttt jupyterlab-kind RUNNING  65m  conda     conda-py311-cudaDevel11.8 jupyterlab https://xxxxxxx-ssss-zzzz-ffff-tttttttttttt.notebook.gra.ai.cloud.ovh.net

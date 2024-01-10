@@ -10,13 +10,13 @@ Follow the instructions in the [/src/training/train.py](../src/training/train.py
 
 If you need to debug your Python application you can run locally your training (beware of the performances you don't have GPU locally).
 To run your training locally:
-	- install dependencies: `pip install -r requirements.txt`
-	- set the environment variables:
-		- `export NB_OF_EPOCHS=1`
-		- `export DEVICE_TO_USE=cpu`
-		- `export PATH_TO_DATASET=/workspace/101-AI-and-py/src/training/local-dataset/data.yaml`
-		- `export PATH_TO_EXPORTED_MODEL=./`
-	- run the training: `python train.py`
+ - install dependencies: `pip install -r requirements.txt`
+ - set the environment variables:
+	- `export NB_OF_EPOCHS=1`
+	- `export DEVICE_TO_USE=cpu`
+	- `export PATH_TO_DATASET=/workspace/101-AI-and-py/src/training/local-dataset/data.yaml`
+	- `export PATH_TO_EXPORTED_MODEL=./`
+ - run the training: `python train.py`
 
 ⚠️ The [src/training/local-dataset](../src/training/local-dataset) is only a subset of the real dataset for testing / debugging only ⚠️
 
