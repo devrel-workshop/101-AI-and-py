@@ -10,11 +10,11 @@ Follow the instructions in the [/src/app/app.py](../src/app/app.py) file to add 
 
 If you need to debug your Python application you can run locally your app.
 To run your application locally:
-	- install dependencies: `pip install -r requirements.txt`
-	- download / get the weights of your trained model and copy it to a `work` folder
-	- set the environment variables:
-		- `export WORK_PATH=./work/`
-	- run the application: `streamlit run app.py`
+- install dependencies: `pip install -r requirements.txt`
+- download / get the weights of your trained model and copy it to a `work` folder
+- set the environment variables:
+ - `export WORK_PATH=./work/`
+- run the application: `streamlit run app.py`
 
 ### Image build
 
