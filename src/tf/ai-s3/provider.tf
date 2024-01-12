@@ -23,8 +23,8 @@ provider "openstack" {
 provider "aws" {
   region     = "gra"
   
-  access_key = "b6d351bf652b4871a04fc25d94e2836a"
-  secret_key = "bf80c42580e3487cb44a3a3923d1f136"
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
 
   # OVH implementation has no STS service
   skip_credentials_validation = true
