@@ -135,7 +135,6 @@ dmypy.json
 # Model format
 *.onnx
 *.pt
-*.torchscript
 /yolov8n_saved_model/
 runs/
 src/app/photo/
@@ -152,3 +151,4 @@ labels.cache
 src/training/*.jpg
 .terraform.tfstate.lock.info
 attendee-conf.json
+src/app/solution/work/*.jpg
