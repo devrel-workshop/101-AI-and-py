@@ -1,6 +1,8 @@
 # Get the attendee configuration parameters
-curl -u attendee http://162.19.64.158/lab-information -o attendee-conf.json
-#curl -u attendee http://localhost:8080/lab-information -o attendee-conf.json
+if ! [ -f "./attendee-conf.json" ];then
+  curl -u attendee http://162.19.64.158/lab-information -o attendee-conf.json
+  #curl -u attendee http://localhost:8080/lab-information -o attendee-conf.json
+fi
 
 echo "Downladed parameters:"
 cat attendee-conf.json|jq
