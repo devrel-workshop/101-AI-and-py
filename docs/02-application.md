@@ -4,7 +4,7 @@ Here you find all steps to create and run an image to create an application base
 
 ### Script creation
 
-ℹ️ You can access to the solutions in the folder [src/app/solution](../src/app/solution) ℹ️
+ℹ️ You can access to the solutions in the folder [solution/ai/deploy/YOLOV8](../solution/ai/deploy/) ℹ️
 
 Follow the instructions in the [/src/app/app.py](../src/app/app.py) file to add code to create an application using the model.
 
@@ -18,7 +18,7 @@ To run your application locally:
 
 ### Image build
 
-The Python script need to access to the following path mounted as volume in your image: `/workspace/attendee`.
+The Python script need to access to the following path mounted as volume in your image: `/workspace/data`.
 
 The volume is the S3 object container storage previously used: `$STUDENT_ID@S3GRA`
 
@@ -38,7 +38,7 @@ ovhai app run \
     --name $STUDENT_ID-yolov8-rock-paper-scissors-app \
     --cpu 1 \
     --default-http-port 8501 \
-    --volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
+    --volume $STUDENT_ID@S3GRA:/workspace/data:RW:cache \
     --unsecure-http \
     $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0
 ```

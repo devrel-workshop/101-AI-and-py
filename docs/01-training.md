@@ -4,7 +4,7 @@ Here you find all steps to create and run an image to train the model previously
 
 ### Script creation
 
-ℹ️ You can access to the solutions in the folder [src/training/solution](../src/training/solution) ℹ️
+ℹ️ You can access to the solutions in the folder [solution/training/solution](../solution/ai/training/YOLOV8/) ℹ️
 
 Follow the instructions in the [/src/training/train.py](../src/training/train.py) file to add code to train the model.
 
@@ -23,8 +23,8 @@ To run your training locally:
 ### Image build
 
 The Python script need to access to two paths:
- - one to load the training data: `/workspace/attendee/data.yaml`
- - one to write the trained model: `/workspace/attendee/`
+ - one to load the training data: `/workspace/data/data.yaml`
+ - one to write the trained model: `/workspace/data/`
 
 These two locations are mounted as volume of the image, the paths for the host are the OVHcloud object container storage used in the Notebook: `xxxx_id`, for example `conference_0`.
 
@@ -43,7 +43,7 @@ ovhai job run \
 	--name $STUDENT_ID-yolov8-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
-	--volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
+	--volume $STUDENT_ID@S3GRA:/workspace/data:RW:cache \
 	--unsecure-http \
 	$REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0
 ```
