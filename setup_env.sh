@@ -23,7 +23,7 @@ echo "   - AI_TOKEN: " $AI_TOKEN
 echo "Your notebook URL: " $(jq -r '.notebookUrl' "attendee-conf.json")
 
 # Get code source from official demos
-git clone -n --depth=1 --filter=tree:0 https://github.com/ovh/public-cloud-examples test-git
+git clone -n --depth=1 --filter=tree:0 https://github.com/ovh/public-cloud-examples solutions
 git sparse-checkout set --no-cone ai/notebooks/YOLOV8 ai/training/YOLOV8 ai/deploy/YOLOV8
 git checkout
 
