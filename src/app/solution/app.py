@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import streamlit as st
 import os
+
 #######################################################################################################################
 ## 🎯 The aim of this script is to create an Rock/Paper/Scissors application based on a trained model (from YOLOv8). ##
 ## ℹ️ Note on the environments variables:                                                                            ##
@@ -73,7 +74,7 @@ def find_winner(first_input, second_input):
 # main
 if __name__ == '__main__':
     # App title
-    st.write("## Welcome on the 🪨 📄 ✂️ game!")
+    st.write("## Welcome to the 🪨 📄 ✂️ game!")
 
     # 🧠 Load the model
     model = YOLO(WORK_PATH + "best.torchscript")
