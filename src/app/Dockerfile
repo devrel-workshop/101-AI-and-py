@@ -15,6 +15,6 @@ RUN apt-get install ffmpeg libsm6 libxext6  -y
 # Mandatory to run the jobs in rootless mode
 RUN chown -R 42420:42420 /workspace
 
-# run (CMD) the app.py
+# CMD: Run app.py file with Streamlit to launch the app
 
 #ENV HOME=/workspace
