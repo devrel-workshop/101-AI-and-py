@@ -18,7 +18,7 @@ def save_photo(photo):
 # main
 if __name__ == '__main__':
 
-    st.write("## Welcome on the 🪨 📄 ✂️ game!")
+    st.write("## Welcome to the 🪨 📄 ✂️ game!")
     # 🧠 Load the model
 
     # 📸 Camera input
