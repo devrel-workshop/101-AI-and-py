@@ -17,7 +17,7 @@ ADD app.py /workspace
 # Mandatory to run the jobs in rootless mode
 RUN chown -R 42420:42420 /workspace
 
-# run (CMD) the app.py
+# CMD: Run app.py file with Streamlit to launch the app
 CMD [ "streamlit" , "run" , "/workspace/app.py", "--server.address=0.0.0.0" ]
 
 
