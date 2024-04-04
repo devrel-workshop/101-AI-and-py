@@ -34,7 +34,7 @@ print('Path to the dataset to set:', pathToDataset)
 print('Path to the exported model to set:', pathToExportedModel)
 
 # 💪 Train the model with new data ➡️ one GPU / NB_OF_EPOCHS iterations (epochs)
-model.train(data=pathToDataset, device=deviceToUse, epochs=int(nbOfEpochs), verbose=True, batch= batch, freeze=freeze)
+model.train(data=pathToDataset, device=deviceToUse, epochs=int(nbOfEpochs), verbose=True, batch=batch, freeze=freeze)
 
 # 💾 Save the model
 exportedMetaData = model.export()
