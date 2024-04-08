@@ -13,6 +13,10 @@ import os
 ## training dataset                                                                                                  ##
 ##		  - PATH_TO_EXPORTED_MODEL (default value is '/workspace/attendee/') is to specify the path where export the   ##
 ## trained model                                                                                                     ##
+##        - BATCH specifies the number of images used for one training iteration before updating the model's weights.  ##
+## A larger batch size can lead to faster training but requires more memory.
+##        - FREEZE allows to freeze certain layers of a pre-trained model. This way, these layers are kept unchanged   ##
+## during training, which allows to preserve knowledge from the pre-trained model.                                   ##
 #######################################################################################################################
 
 # ✅ Check configuration
