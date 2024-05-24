@@ -12,11 +12,13 @@ To create and use an image in that case, you can read the [dedicated documentati
 2. run the command to build the image from this folder
    `docker build --tag [YOUR_PRIVATE_REGISTRY_URL]/[YOUR_PROJECT]/[YOUR IMAGE NAME]:[YOUR VERSION] .`  
    as an example something like  
-   `docker build --tag bdmxla3s.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.3.0 .`
+   `docker build --tag bdmxla3s.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.3.2 .`
 
 3. push this image to a registry  
    `docker push [YOUR_PRIVATE_REGISTRY_URL]/[YOUR_PROJECT]/[YOUR IMAGE NAME]:[YOUR VERSION]`  
    as an example something like  
-   `docker push bdmxla3s.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.3.0`
+   `docker push bdmxla3s.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.3.2`
 
 4. modify the .gitpod.yml file to use this image
+
+5. modify the [.gitpod.yml file](https://github.com/devrel-workshop/101-AI-Enpoints/blob/main/.gitpod.yml) of the Endpoint lab to use this image

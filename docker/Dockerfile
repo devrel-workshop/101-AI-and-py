@@ -8,12 +8,16 @@ RUN apt-get update && apt-get install -yq \
     python${PYTHON_VERSION} \
     python3-venv \
     python3-pip \
+    zip \
     unzip \
     curl \
     docker.io \
     libgl1 \
     libglib2.0-0 \
-    jq
+    jq \
+    openjdk-21-jdk \
+    maven
+
 
 # thoses steps reduce the size of the image but users nees to do apt update to install anything
 #    docker.io \
@@ -26,10 +30,17 @@ RUN cp /root/bin/ovhai /usr/local/bin/
 # Create the gitpod user. UID must be 33333.
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
 
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 USER gitpod
 
 ENV VIRTUAL_ENV=/home/gitpod/venv
 RUN python${PYTHON_VERSION} -m venv $VIRTUAL_ENV
-#RUN cd /home/gitpod && curl -sS "$ARCHIVE_URL" -o "$ARCHIVE" && mkdir -p /home/gitpod/bin && unzip -q "$ARCHIVE" -d /home/gitpod/bin && chmod +x "/home/gitpod/bin/ovhai"
 
+RUN curl -s "https://get.sdkman.io" | bash
+ENV BASH_ENV="\$HOME/.sdkman/bin/sdkman-init.sh"
+RUN chmod +x ${HOME}/.sdkman/bin/sdkman-init.sh \
+    && source ${HOME}/.sdkman/bin/sdkman-init.sh \
+    && sdk install quarkus  \
+    && sdk flush 
 
