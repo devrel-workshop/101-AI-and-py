@@ -1,4 +1,4 @@
-image: bdmxla3s.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.2.3
+image: bdmxla3s.gra7.container-registry.ovh.net/workshop_ia/101_ia:1.3.0
 
 tasks:
   - name: Activate proper python and create environment file

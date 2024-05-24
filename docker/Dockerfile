@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-ARG PYTHON_VERSION=3.10
+FROM ubuntu:24.04
+ARG PYTHON_VERSION=3.12
 
 RUN apt-get update && apt-get install -yq \
     git \
@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -yq \
     libgl1 \
     libglib2.0-0 \
     jq
-    
+
 # thoses steps reduce the size of the image but users nees to do apt update to install anything
 #    docker.io \
 #    && apt-get clean \
