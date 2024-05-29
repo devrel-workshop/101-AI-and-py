@@ -42,6 +42,17 @@ ovhai app run \
     --unsecure-http \
     $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-app:1.0.0
 ```
+If you don't have a private registry feel free to use pre-build image on Docker Hub:
+```bash
+ovhai app run \
+    --token $AI_TOKEN \
+    --name $STUDENT_ID-yolov8-rock-paper-scissors-app \
+    --cpu 1 \
+    --default-http-port 8501 \
+    --volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
+    --unsecure-http \
+    wilda/yolov8-rock-paper-scissors-app:1.0.0
+```
 - get the logs: `ovhai app logs -f <app id> --token $AI_TOKEN`
 - get the URL:
 	- get the application id: `ovhai app list --token $AI_TOKEN` 
