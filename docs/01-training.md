@@ -60,4 +60,4 @@ ovhai job run \
 	wilda/yolov8-rock-paper-scissors-training-job:1.0.0
 ```
 
-Follow the training with the logs: `ovhai job logs -f <job id>`
+Follow the training with the logs: `ovhai job logs -f <job id> --token $AI_TOKEN`
