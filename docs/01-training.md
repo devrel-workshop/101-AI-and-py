@@ -15,7 +15,7 @@ To run your training locally:
 ```bash
 export NB_OF_EPOCHS=1 \
 export DEVICE_TO_USE=cpu \
-export PATH_TO_DATASET=/workspace/101-AI-and-py/src/training/local-dataset/data.yaml \
+export PATH_TO_DATASET=/home/ubuntu/101-AI-and-py/src/training/local-dataset/data.yaml \
 export PATH_TO_EXPORTED_MODEL=./
 ```
  - run the training: `python train.py`
