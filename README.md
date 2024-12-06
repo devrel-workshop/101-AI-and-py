@@ -1,9 +1,12 @@
 ## Welcome to the 101 lab source to discover Python and Artificial Intelligence.
 
-### Getting started
+### Getting started with Coder
 
-When you launch the Gitpod instance on this repository you will prompt to enter a password for use _attendee_: `Enter host password for user 'attendee':`.  
-Ask the speaker to get the password.  
+Run the following command: `source ./setup_env.sh`
+You will prompt to enter a password for user _attendee_: `Enter host password for user 'attendee':`.  
+
+**Ask the speakers to get the password.**
+
 After enter it you will see all your environment variable set and displayed:
 ```bash
 Downladed parameters:
