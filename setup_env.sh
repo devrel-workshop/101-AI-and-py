@@ -25,3 +25,7 @@ echo "Your notebook URL: " $(jq -r '.notebookUrl' "attendee-conf.json")
 # List the notebook for attendee
 echo ovhai notebook list --token $AI_TOKEN
 ovhai notebook list --token $AI_TOKEN
+
+# create and activate a python venv
+python3 -m venv .venv
+source .venv/bin/activate
