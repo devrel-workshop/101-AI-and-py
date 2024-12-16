@@ -3,4 +3,4 @@ Dockerfile
 ./local-dataset/
 ./runs/
 best.torchscript
-yolov8n.pt
+yolov*.pt
