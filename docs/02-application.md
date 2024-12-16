@@ -51,7 +51,7 @@ ovhai app run \
     --default-http-port 8501 \
     --volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
     --unsecure-http \
-    wilda/yolov11-rock-paper-scissors-app:1.0.0
+    ubf2r2if.c1.gra9.container-registry.ovh.net/lab/teacher/yolov11-rock-paper-scissors-app:1.0.0
 ```
 - get the logs: `ovhai app logs -f <app id> --token $AI_TOKEN`
 - get the URL:
