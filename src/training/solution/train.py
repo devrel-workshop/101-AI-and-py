@@ -4,7 +4,7 @@ import shutil
 import os
 
 #######################################################################################################################
-## 🎯 The aim of this script is to do transfert learning on YOLOv8 model.                                            ##
+## 🎯 The aim of this script is to do transfert learning on YOLOv11 model.                                            ##
 ## ℹ️ Note on the environments variables:                                                                            ##
 ##      - NB_OF_EPOCHS (default value: 50) is an environment variable passed to the Docker run command to specify    ##
 ## the number of epochs                                                                                              ##
@@ -23,7 +23,7 @@ import os
 ultralytics.checks()
 
 # 🧠 Load a pretrained YOLO model
-model = YOLO('yolov8n.pt')
+model = YOLO('yolo11n.pt')
 
 # 🛠 Get configuration from environment variables
 nbOfEpochs = os.getenv('NB_OF_EPOCHS', 50)

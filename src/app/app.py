@@ -3,7 +3,7 @@ import streamlit as st
 import os
 
 #######################################################################################################################
-## 🎯 The aim of this script is to create an Rock/Paper/Scissors application based on a trained model (from YOLOv8). ##
+## 🎯 The aim of this script is to create an Rock/Paper/Scissors application based on a trained model (from YOLOv11). ##
 ## ℹ️ Note on the environments variables:                                                                            ##
 ##      - WORK_PATH (default value: '/workspace/attendee/') is the path where get the model and store de snapshots   ##
 #######################################################################################################################

@@ -27,7 +27,7 @@ xxxxxxx-ssss-zzzz-ffff-tttttttttttt jupyterlab-kind RUNNING  65m  conda     cond
 
 ### Model creation with AI Notebook
 
-See instructions in the [model creation section](./docs/00-notebook.md) to do transfer learning of YOLOv8 model to play to the game Rock/Paper/Scissors.  
+See instructions in the [model creation section](./docs/00-notebook.md) to do transfer learning of YOLOv11 model to play to the game Rock/Paper/Scissors.  
 
 ### Model training with AI Training
 

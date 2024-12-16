@@ -135,10 +135,10 @@ dmypy.json
 # Model format
 *.onnx
 *.pt
-/yolov8n_saved_model/
+/yolov*_saved_model/
 runs/
 src/app/photo/
-yolov8n_saved_model/
+yolov*_saved_model/
 .environment
 
 # Terraform
@@ -152,3 +152,7 @@ src/training/*.jpg
 .terraform.tfstate.lock.info
 attendee-conf.json
 src/app/solution/work/*.jpg
+
+# Local 
+attendee/
+src/training/solution/best.torchscript

@@ -32,9 +32,9 @@ These two locations are mounted as volume of the image, the paths for the host a
 
 The registry used to store the image is the an Harbor registry provided by OVHcloud, ask the speakers for the URL and account.
 
-In `/src/training/`, build the image using Docker: `docker build . -t $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0`.  
+In `/src/training/`, build the image using Docker: `docker build . -t $REGISTRY_NAME/$STUDENT_ID/yolov11-rock-paper-scissors-training-job:1.0.0`.  
 Then, authenticate to the registry: `docker login $REGISTRY_NAME  -u $REGISTRY_LOGIN -p $REGISTRY_PASSWORD`.
-Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0`.
+Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov11-rock-paper-scissors-training-job:1.0.0`.
 
 ### Job creation 
 
@@ -42,24 +42,24 @@ Use the CLI to create the Job:
 ```bash
 ovhai job run \
 	--token $AI_TOKEN \
-	--name $STUDENT_ID-yolov8-rock-paper-scissors-training-job \
+	--name $STUDENT_ID-yolov11-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
 	--volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
 	--unsecure-http \
-	$REGISTRY_NAME/$STUDENT_ID/yolov8-rock-paper-scissors-training-job:1.0.0
+	$REGISTRY_NAME/$STUDENT_ID/yolov11-rock-paper-scissors-training-job:1.0.0
 ```
 
-If you don't have a private registry feel free to use pre-build image on Docker Hub:
+If you don't have a private registry feel free to use pre-build image:
 ```bash
 ovhai job run \
 	--token $AI_TOKEN \
-	--name $STUDENT_ID-yolov8-rock-paper-scissors-training-job \
+	--name $STUDENT_ID-yolov11-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
 	--volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
 	--unsecure-http \
-	wilda/yolov8-rock-paper-scissors-training-job:1.0.0
+	ubf2r2if.c1.gra9.container-registry.ovh.net/lab/teacher/yolov11-rock-paper-scissors-training-job:1.0.0
 ```
 
 Follow the training with the logs: `ovhai job logs -f <job id> --token $AI_TOKEN`
