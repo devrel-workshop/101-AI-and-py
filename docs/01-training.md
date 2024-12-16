@@ -50,7 +50,7 @@ ovhai job run \
 	$REGISTRY_NAME/$STUDENT_ID/yolov11-rock-paper-scissors-training-job:1.0.0
 ```
 
-If you don't have a private registry feel free to use pre-build image on Docker Hub:
+If you don't have a private registry feel free to use pre-build image:
 ```bash
 ovhai job run \
 	--token $AI_TOKEN \
@@ -59,7 +59,7 @@ ovhai job run \
 	--env NB_OF_EPOCHS=10 \
 	--volume $STUDENT_ID@S3GRA:/workspace/attendee:RW:cache \
 	--unsecure-http \
-	wilda/yolov11-rock-paper-scissors-training-job:1.0.0
+	ubf2r2if.c1.gra9.container-registry.ovh.net/lab/teacher/yolov11-rock-paper-scissors-training-job:1.0.0
 ```
 
 Follow the training with the logs: `ovhai job logs -f <job id> --token $AI_TOKEN`

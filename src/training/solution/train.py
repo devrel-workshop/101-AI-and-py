@@ -23,7 +23,7 @@ import os
 ultralytics.checks()
 
 # 🧠 Load a pretrained YOLO model
-model = YOLO('yolov11n.pt')
+model = YOLO('yolo11n.pt')
 
 # 🛠 Get configuration from environment variables
 nbOfEpochs = os.getenv('NB_OF_EPOCHS', 50)
