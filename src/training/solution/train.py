@@ -6,7 +6,7 @@ import os
 #######################################################################################################################
 ## 🎯 The aim of this script is to do transfert learning on YOLOv11 model.                                            ##
 ## ℹ️ Note on the environments variables:                                                                            ##
-##      - NB_OF_EPOCHS (default value: 50) is an environment variable passed to the Docker run command to specify    ##
+##      - NB_OF_EPOCHS (default value: 10) is an environment variable passed to the Docker run command to specify    ##
 ## the number of epochs                                                                                              ##
 ##      - DEVICE_TO_USE (default value 0) is to specify to use GPU (0) or CPU (cpu)                                  ##
 ##		  - PATH_TO_DATASET (default value is '/workspace/attendee/data.yaml') is to specify the path to the           ##
@@ -26,7 +26,7 @@ ultralytics.checks()
 model = YOLO('yolo11n.pt')
 
 # 🛠 Get configuration from environment variables
-nbOfEpochs = os.getenv('NB_OF_EPOCHS', 50)
+nbOfEpochs = os.getenv('NB_OF_EPOCHS', 10)
 deviceToUse = os.getenv('DEVICE_TO_USE', 0)
 pathToDataset = os.getenv('PATH_TO_DATASET', '/workspace/attendee/data.yaml')
 pathToExportedModel = os.getenv('PATH_TO_EXPORTED_MODEL', '/workspace/attendee/')

@@ -15,11 +15,10 @@ Your environment variables:
    - REGISTRY_NAME: the name of the registry to use with the Docker commands
    - REGISTRY_LOGIN: <login to the remote registry> 
    - REGISTRY_PASSWORD: <password to the remote registry>
-   - AI_TOKEN: <AI token to use OVHcloud AI tools>
 ```
 Following by the information of your Notebook:
 ```bash
-$ ovhai notebook list --token $AI_TOKEN
+$ ovhai notebook list
 
 ID                                   NAME            STATE    AGE  FRAMEWORK VERSION                   EDITOR     URL
 xxxxxxx-ssss-zzzz-ffff-tttttttttttt jupyterlab-kind RUNNING  65m  conda     conda-py311-cudaDevel11.8 jupyterlab https://xxxxxxx-ssss-zzzz-ffff-tttttttttttt.notebook.gra.ai.cloud.ovh.net
