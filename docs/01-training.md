@@ -49,7 +49,7 @@ ovhai job run \
 	--name yolov11-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
-	--volume ai-tech-lab@UK/:/workspace/attendee:RW:cache \
+	--volume polytech-tp-0@S3GRA/:/workspace/attendee:RW:cache \
 	--unsecure-http \
 	$REGISTRY_NAME/$STUDENT_ID/yolov11-rock-paper-scissors-training-job:1.0.0
 ```
@@ -60,7 +60,7 @@ ovhai job run \
 	--name yolov11-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
-	--volume ai-tech-lab@UK/:/workspace/attendee:RW:cache \
+	--volume  polytech-tp-0@S3GRA/:/workspace/attendee:RW:cache \
 	--unsecure-http \
 	ubf2r2if.c1.gra9.container-registry.ovh.net/lab/teacher/yolov11-rock-paper-scissors-training-job:1.0.0
 ```
