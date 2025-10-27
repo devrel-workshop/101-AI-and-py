@@ -40,7 +40,7 @@ ovhai app run \
     --name yolov11-rock-paper-scissors-app \
     --cpu 1 \
     --default-http-port 8501 \
-    --volume ai-tech-lab@UK/:/workspace/attendee:RW:cache \
+    --volume polytech-tp-0@S3GRA/:/workspace/attendee:RW:cache \
     --unsecure-http \
     $REGISTRY_NAME/$STUDENT_ID/yolov11-rock-paper-scissors-app:1.0.0
 ```
@@ -51,7 +51,7 @@ ovhai app run \
     --name yolov11-rock-paper-scissors-app \
     --cpu 1 \
     --default-http-port 8501 \
-    --volume ai-tech-lab@UK/:/workspace/attendee:RW:cache \
+    --volume polytech-tp-0@S3GRA/:/workspace/attendee:RW:cache \
     --unsecure-http \
     ubf2r2if.c1.gra9.container-registry.ovh.net/lab/teacher/yolov11-rock-paper-scissors-app:1.0.0
 ```

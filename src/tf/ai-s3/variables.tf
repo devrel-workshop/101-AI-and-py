@@ -5,7 +5,7 @@ variable number_of_attendees {
 
 variable team {
   type        = string
-  default     = "attendee"
+  default     = "polytech-tp"
 }
 
 variable access_key {
