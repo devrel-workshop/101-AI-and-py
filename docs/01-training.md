@@ -46,6 +46,7 @@ Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov11-ro
 Use the CLI to create the Job:
 ```bash
 ovhai job run \
+	--token $AI_TOKEN \
 	--name yolov11-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
@@ -57,6 +58,7 @@ ovhai job run \
 If you don't have a private registry feel free to use pre-build image:
 ```bash
 ovhai job run \
+	--token $AI_TOKEN \
 	--name yolov11-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
@@ -65,4 +67,4 @@ ovhai job run \
 	ubf2r2if.c1.gra9.container-registry.ovh.net/lab/teacher/yolov11-rock-paper-scissors-training-job:1.0.0
 ```
 
-Follow the training with the logs: `ovhai job logs -f <job id>`
+Follow the training with the logs: `ovhai job logs --token $AI_TOKEN -f <job id>`
