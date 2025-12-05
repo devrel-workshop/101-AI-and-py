@@ -38,7 +38,7 @@ Then, push the builded image: `docker push $REGISTRY_NAME/$STUDENT_ID/yolov11-ro
 ```bash
 ovhai app run \
     --token $AI_TOKEN \
-    --name yolov11-rock-paper-scissors-app \
+    --name $STUDENT_ID-yolov11-rock-paper-scissors-app \
     --cpu 1 \
     --default-http-port 8501 \
     --volume polytech-tp-0@S3GRA/:/workspace/attendee:RW:cache \
@@ -49,7 +49,7 @@ If you don't have a private registry feel free to use pre-build image on Docker 
 ```bash
 ovhai app run \
     --token $AI_TOKEN \
-    --name yolov11-rock-paper-scissors-app \
+    --name $STUDENT_ID-yolov11-rock-paper-scissors-app \
     --cpu 1 \
     --default-http-port 8501 \
     --volume polytech-tp-0@S3GRA/:/workspace/attendee:RW:cache \

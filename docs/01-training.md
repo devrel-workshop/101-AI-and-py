@@ -47,7 +47,7 @@ Use the CLI to create the Job:
 ```bash
 ovhai job run \
 	--token $AI_TOKEN \
-	--name yolov11-rock-paper-scissors-training-job \
+	--name $STUDENT_ID-yolov11-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
 	--volume polytech-tp-0@S3GRA/:/workspace/attendee:RW:cache \
@@ -59,7 +59,7 @@ If you don't have a private registry feel free to use pre-build image:
 ```bash
 ovhai job run \
 	--token $AI_TOKEN \
-	--name yolov11-rock-paper-scissors-training-job \
+	--name $STUDENT_ID-yolov11-rock-paper-scissors-training-job \
 	--gpu 1 \
 	--env NB_OF_EPOCHS=10 \
 	--volume  polytech-tp-0@S3GRA/:/workspace/attendee:RW:cache \
